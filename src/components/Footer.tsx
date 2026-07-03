@@ -94,20 +94,6 @@ export default function Footer({ personal, onOpenEditor, isUnlocked, scheme, isD
             <p className={isDarkMode ? 'text-zinc-500' : 'text-zinc-400'}>
               &copy; {new Date().getFullYear()} {personal.name}. All rights reserved. Built with React & Tailwind CSS.
             </p>
-            <p className={isDarkMode ? 'text-zinc-500' : 'text-zinc-400'}>
-              <span className="inline-flex items-center gap-1">
-                <Sparkles className="h-3 w-3 text-amber-500 animate-pulse" />
-                <span>Customizable live template running at </span>
-                <a
-                  href="https://ai.studio/apps/64cdcc50-2718-4c25-8519-76d0dc0b480f"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`font-semibold hover:underline ${isDarkMode ? 'text-amber-400' : 'text-emerald-600'}`}
-                >
-                  Google AI Studio Build (Instance 64cdcc50)
-                </a>
-              </span>
-            </p>
           </div>
 
           <button
