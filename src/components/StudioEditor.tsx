@@ -2212,6 +2212,21 @@ export default function StudioEditor({ initialData, onSave, scheme, isDarkMode, 
                               }`}
                             />
                           </div>
+
+                          <div className="space-y-1.5">
+                            <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">External Article / Blog URL (Optional)</label>
+                            <input
+                              type="url"
+                              placeholder="e.g. https://medium.com/my-article"
+                              value={blog.externalLink || ''}
+                              onChange={(e) => handleUpdateBlog(idx, 'externalLink', e.target.value)}
+                              className={`w-full rounded-xl border px-3 py-2 text-sm focus:outline-hidden focus:ring-1 transition-all ${
+                                isDarkMode
+                                  ? 'bg-zinc-900 border-zinc-800 text-white focus:border-zinc-700 focus:ring-zinc-750'
+                                  : 'bg-white border-zinc-200 text-zinc-800 focus:border-zinc-400 focus:ring-zinc-400'
+                              }`}
+                            />
+                          </div>
                         </div>
 
                         <div className="space-y-1.5">
@@ -2369,7 +2384,7 @@ export default function StudioEditor({ initialData, onSave, scheme, isDarkMode, 
                             </button>
                           </div>
 
-                          <div className="grid gap-4 md:grid-cols-2">
+                          <div className="grid gap-4 md:grid-cols-3">
                             <div className="space-y-1.5">
                               <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Document/Article Title</label>
                               <input
@@ -2390,6 +2405,21 @@ export default function StudioEditor({ initialData, onSave, scheme, isDarkMode, 
                                 type="text"
                                 value={article.date}
                                 onChange={(e) => handleUpdateArticle(idx, 'date', e.target.value)}
+                                className={`w-full rounded-xl border px-3 py-2 text-sm focus:outline-hidden focus:ring-1 transition-all ${
+                                  isDarkMode
+                                    ? 'bg-zinc-900 border-zinc-800 text-white focus:border-zinc-700 focus:ring-zinc-750'
+                                    : 'bg-white border-zinc-200 text-zinc-800 focus:border-zinc-400 focus:ring-zinc-400'
+                                }`}
+                              />
+                            </div>
+
+                            <div className="space-y-1.5">
+                              <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">External Article URL (Optional)</label>
+                              <input
+                                type="url"
+                                placeholder="e.g. https://example.com/published-paper"
+                                value={article.externalLink || ''}
+                                onChange={(e) => handleUpdateArticle(idx, 'externalLink', e.target.value)}
                                 className={`w-full rounded-xl border px-3 py-2 text-sm focus:outline-hidden focus:ring-1 transition-all ${
                                   isDarkMode
                                     ? 'bg-zinc-900 border-zinc-800 text-white focus:border-zinc-700 focus:ring-zinc-750'

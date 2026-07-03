@@ -106,6 +106,7 @@ export interface Blog {
   tags: string[];
   imageUrl?: string;
   attachment?: BlogAttachment;
+  externalLink?: string;
 }
 
 export interface Article {
@@ -118,6 +119,7 @@ export interface Article {
   fileType: string;
   fileSize: string;
   dataUrl: string; // Base64 representation of the uploaded article file (PDF, DOC, MD, etc.)
+  externalLink?: string;
 }
 
 export type AccentColor = 'emerald' | 'violet' | 'amber' | 'sky' | 'rose' | 'indigo';
