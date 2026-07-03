@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "PortfolioData": {
+      "title": "PortfolioData",
+      "description": "The complete portfolio configuration and content data",
+      "type": "object",
+      "properties": {
+        "personal": {
+          "type": "object",
+          "description": "Personal biography and contact information"
+        },
+        "projects": {
+          "type": "array",
+          "description": "List of projects built by the user"
+        },
+        "experience": {
+          "type": "array",
+          "description": "Professional work history"
+        },
+        "skills": {
+          "type": "array",
+          "description": "Skills categorized with proficiency"
+        },
+        "academics": {
+          "type": "array",
+          "description": "Academic qualifications and credentials"
+        },
+        "passions": {
+          "type": "array",
+          "description": "Talents, passions, and secondary pursuits"
+        },
+        "customization": {
+          "type": "object",
+          "description": "Visual themes and customization options"
+        }
+      },
+      "required": ["personal", "projects", "experience", "skills", "customization"]
+    }
+  },
+  "firestore": {
+    "portfolios/{portfolioId}": {
+      "schema": "PortfolioData",
+      "description": "User portfolios collection"
+    }
+  }
+}

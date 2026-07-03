@@ -1,0 +1,6 @@
+{
+  "name": "Personal Portfolio",
+  "description": "A highly-polished personal portfolio builder with an interactive Live Studio Editor, custom styles, and download support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
